@@ -28,7 +28,7 @@ JobberApp is a simple job board application that allows users to apply for jobs.
 4. Run the client
    
    ```bash
-   git clone (https://)
+   git clone (https://github.com/Dasiloy/JobberApp.git)
    cd JobberApp
    npm install
    npm start
@@ -48,4 +48,4 @@ MIT License(https://opensource.org/licenses/MIT)
 
 ## Author
 
-- [Dasiloy]()
+- [Dasiloy](https://github.com/Dasiloy)
