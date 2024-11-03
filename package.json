@@ -11,13 +11,11 @@
     "pod-install": "cd ios && pod install && cd .."
   },
   "dependencies": {
-    "@apollo/client": "^3.11.4",
     "@gorhom/bottom-sheet": "^4.6.4",
     "@react-native-async-storage/async-storage": "^1.24.0",
     "axios": "^1.7.3",
     "color-alpha": "^2.0.0",
     "dayjs": "^1.11.12",
-    "graphql": "^16.9.0",
     "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-native": "0.74.5",
@@ -48,6 +46,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "packageManager": "yarn@3.6.4"
+  }
 }
