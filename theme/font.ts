@@ -1,9 +1,11 @@
-export const font = {
-  "Manrope-200": "Manrope-ExtraLight",
-  "Manrope-300": "Manrope-Light",
-  "Manrope-400": "Manrope-Regular",
-  "Manrope-500": "Manrope-Medium",
-  "Manrope-600": "Manrope-SemiBold",
-  "Manrope-700": "Manrope-Bold",
-  "Manrope-800": "Manrope-ExtraBold",
+export const fonts = {
+  "Poppins-100": "Poppins-Thin",
+  "Poppins-200": "Poppins-ExtraLight",
+  "Poppins-300": "Poppins-Light",
+  "Poppins-400": "Poppins-Regular",
+  "Poppins-500": "Poppins-Medium",
+  "Poppins-600": "Poppins-SemiBold",
+  "Poppins-700": "Poppins-Bold",
+  "Poppins-800": "Poppins-ExtraBold",
+  "Poppins-900": "Poppins-Black",
 };

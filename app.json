@@ -1,18 +1,22 @@
 {
   "expo": {
-    "name": "JobberApp",
-    "slug": "JobberApp",
+    "name": "Jobber",
+    "slug": "Jobber",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "jobberapp",
+    "icon": "./assets/images/splash.png",
+    "scheme": "jobber",
+    "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
     "splash": {
+      "resizeMode": "cover",
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "icon": {
+        "light": "./assets/images/splash.png"
+      },
       "supportsTablet": true,
       "config": {
         "usesNonExemptEncryption": false
@@ -22,7 +26,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dasycreation.JobberApp"
     },
     "web": {
       "bundler": "metro",
@@ -31,7 +36,6 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store",
       [
         "expo-secure-store",
         {
@@ -41,6 +45,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "26e02a98-afbf-4efa-a083-269032e3cfc8"
+      }
     }
   }
 }

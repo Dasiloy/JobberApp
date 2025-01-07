@@ -11,7 +11,7 @@ export const useUser = (param?: TQueryDTO) => {
     enabled: param?.enabled ?? true,
     queryFn: async () => {
       try {
-        const response = await api.get("/auth/user");
+        const response = await api.get("/auth/me");
         return response.data;
       } catch (error) {
         return Promise.reject(error);

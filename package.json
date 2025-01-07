@@ -8,7 +8,13 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "build": "eas build -p all",
+    "build-android": "eas build -p android",
+    "build-ios": "eas build -p ios",
+    "build-dev": "eas build -p all --profile development",
+    "build-ios-preview": "eas build -p ios --profile preview",
+    "build-android-preview": "eas build -p android --profile preview"
   },
   "jest": {
     "preset": "jest-expo"
@@ -76,11 +82,11 @@
     "typescript": "^5.3.3"
   },
   "private": true,
-  "expo":{
-    "doctor":{
-      "reactNativeDirectoryCheck":{
-        "listUnknownPackages":false
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnknownPackages": false
+      }
     }
-  }
   }
 }
