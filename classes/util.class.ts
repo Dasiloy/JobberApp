@@ -1,4 +1,5 @@
 import { TCurrency } from "@/types/currency.type";
+import { Dimensions, Platform } from "react-native";
 
 export class Util {
   private static instance: Util | null = null;
@@ -44,7 +45,7 @@ export class Util {
       .substring(0, 2);
   }
 
-  create_hex_color(initials = "") {
+  createHexColor(initials = "") {
     const hash = initials
       .split("")
       .reduce((acc, char) => char.charCodeAt(0) + ((acc << 5) - acc), 0);
@@ -93,6 +94,17 @@ export class Util {
       const v = c === "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
     });
+  }
+
+  getGridWidth(numColumns: number, gap: number) {
+    const spacing =
+      Platform.select({
+        default: 40, // android px-5
+        ios: 32, // ios px-4
+      }) +
+      (numColumns - 1) * gap;
+
+    return (Dimensions.get("window").width - spacing) / numColumns;
   }
 }
 

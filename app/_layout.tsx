@@ -13,9 +13,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import api from "@/lib/axios";
-import * as SecureStore from "expo-secure-store";
 import { User } from "@/classes/user.class";
-import { IUser } from "@/interfaces/user.interface";
 import { Platform } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
@@ -40,12 +38,17 @@ export default function RootLayout() {
 
   useEffect(() => {
     const fetchUser = async () => {
+      console.log(loaded, error);
       if (!loaded || error) return;
+      console.log(loaded, error);
       try {
+        console.log("Fetching user...");
         const { data } = await api.get("/auth/me");
+        console.log(data);
         const user: any = User.GetDataFromQuery(data);
         setUser(User.CreateInstance(user));
       } catch (error) {
+        console.log(error);
         console.log("Failed to fetch user", error, Platform.OS);
         setUser(null);
       } finally {
@@ -54,17 +57,6 @@ export default function RootLayout() {
     };
     fetchUser();
   }, [loaded, error]);
-
-  // useEffect(() => {
-  //   if (loading || !loaded || error) return;
-  //   const user = User.GetDataFromQuery(data);
-  //   if (user) {
-  //     setUser(User.CreateInstance(user));
-  //   } else {
-  //     setUser(null);
-  //   }
-  //   SplashScreen.hideAsync();
-  // }, [isLoading, isPending, data]);
 
   return (
     <QueryClientProvider client={queryClient}>

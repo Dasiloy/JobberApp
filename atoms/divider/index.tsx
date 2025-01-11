@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   divider: {
     width: "100%",
     borderTopWidth: 0.5,
-    borderColor: "#AFB0B6",
+    borderColor: tw.color("grey-70"),
   },
 });
 

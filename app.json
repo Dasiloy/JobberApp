@@ -4,7 +4,7 @@
     "slug": "Jobber",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/splash.png",
+    "icon": "./assets/images/icon.png",
     "scheme": "jobber",
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
@@ -41,7 +41,8 @@
         {
           "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
         }
-      ]
+      ],
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true
